@@ -72,8 +72,8 @@ module.exports = {
         var today = new Date()
         var stringToday = today.getDate() + "-" + today.getMonth() + "-" + today.getFullYear()
 
-        console.log('@@@@@@@')
-        console.log(req.param('email'))
+        // console.log('@@@@@@@')
+        // console.log(req.param('email'))
 
         if(req.param('email') != "usi@usi.ch") {
             Gamer.find().where({email: req.param('email')}).exec(function (err, gamer) {

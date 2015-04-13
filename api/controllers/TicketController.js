@@ -233,7 +233,7 @@ module.exports = {
           });
       })
 
-      Gamer.find().exec(function (err, winners) {
+      Winner.find().exec(function (err, winners) {
           winners.forEach(function(winner) {
               winner.destroy(function(err) {
               })

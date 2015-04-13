@@ -14,6 +14,20 @@ module.exports = {
                 languages: langs
             });
         })
-    }
+    },
+
+    estingui: function(req, res) {
+      Question.find().exec(function (err, questions) {
+
+          questions.forEach(function(question) {
+              question.destroy(function(err) {
+              })
+          });
+
+      })
+
+
+      res.send('ok')
+  	}
 
 };

@@ -5,9 +5,9 @@ import csv
 import urllib2
 import httplib, urllib
 
-website = 'http://localhost:1337/'
+website = 'http://10.40.6.128:1337/'
 
-urllib2.urlopen(website `'language/create?lang=it&code=it')
+urllib2.urlopen(website + 'language/create?lang=it&code=it')
 
 reader = csv.reader(open("domande.csv", 'rU'), dialect='excel')
 current = 0
@@ -25,4 +25,6 @@ for row in reader:
 		url = website + "question/create?" + ss
 
 		urllib2.urlopen(url)
+
+		# print url
 	current += 1
