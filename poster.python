@@ -5,7 +5,9 @@ import csv
 import urllib2
 import httplib, urllib
 
-# urllib2.urlopen('http://orientati.inf.usi.ch:1337/language/create?lang=it&code=it')
+website = 'http://localhost:1337/'
+
+urllib2.urlopen(website `'language/create?lang=it&code=it')
 
 reader = csv.reader(open("domande.csv", 'rU'), dialect='excel')
 current = 0
@@ -20,7 +22,7 @@ for row in reader:
 		params = {'level': lvl, 'it_question': question, 'it_wrong': wrong, 'it_correct': correct}
 		ss = urllib.urlencode(params)
 
-		url = "http://orientati.inf.usi.ch:1337/question/create?" + ss
+		url = website + "question/create?" + ss
 
 		urllib2.urlopen(url)
 	current += 1
