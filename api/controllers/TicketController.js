@@ -149,7 +149,7 @@ module.exports = {
           var ss = ""
 
           for(var w in winners) {
-            ss += winner[w].best + ": " + winner[w].email
+            ss += winners[w].best + ": " + winners[w].email
           }
 
           res.json(ss)
