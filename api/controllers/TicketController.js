@@ -129,6 +129,27 @@ module.exports = {
       }
   },
 
+  migliori: function (req, res) {
+      Gamer.find().where().exec(function (err, gamers) {
+          var winners = []
+
+          var best = 0
+          for(var key in gamers) {
+            if(best < gamers[key].best) {
+              best = gamers[key].best
+            }
+          }
+
+          for(var key in gamers) {
+            if(best == gamers[key].best) {
+              winners.push(gamers[key])
+            }
+          }
+
+          res.json(winners)
+      })
+  },
+
   lottery: function (req, res) {
       Ticket.find().where({prize:1}).exec(function (err, p1Ticket) {
           Ticket.find().where({prize:2}).exec(function (err, p2Ticket) {

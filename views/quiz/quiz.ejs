@@ -35,7 +35,7 @@
         }
 
         .colorRed {
-            color: #e74c3c;
+            color: #CC0000;
         }
 
         .colorGreen {
@@ -238,7 +238,7 @@
                     <a class="btn btn-large btn-block btn-primary" id="dailyTry">
                         <% if(lottery.attempt <= 3) { %>
                             <%= res.i18n({phrase: 'quiz_dailyTry', locale: lang}) %>
-                            <span id="daily"><%= lottery.attempt %> /3</span>
+                            <span id="daily"></span>
                         <% } else { %>
                             <%= res.i18n({phrase: 'quiz_dailyTryExpired', locale: lang}) %>
                         <% } %>
@@ -247,15 +247,18 @@
 
                 <div class="row-fluid">
                     <div class="row-fluid" style="margin-bottom: 20px;" data-step="7" data-position="right" data-intro="<%= res.i18n({phrase: 'quiz_tutorial_step7', locale: lang}) %>">
-                        <a class="btn btn-large btn-block btn-primary" id="rules" style="text-align:center">
-                            <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_rules1', locale: lang}) %></div>
+                        <a class="btn btn-large btn-block btn-primary" id="rules" style="text-align:center; ">
+                            <!-- <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_rules1', locale: lang}) %></div>
                             <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_rules2', locale: lang}) %></div>
                             <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_cat1', locale: lang}) %></div>
                             <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_cat2', locale: lang}) %></div>
                             <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_cat3', locale: lang}) %></div>
                             <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_rules3', locale: lang}) %></div>
                             <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_rules4', locale: lang}) %></div>
-                            <div><%= res.i18n({phrase: 'quiz_rules5', locale: lang}) %></div>
+                            <div><%= res.i18n({phrase: 'quiz_rules5', locale: lang}) %></div> -->
+                            <img class="space" width="200px" src="/images/1.png"> </img>
+                            <img class="space" width="200px" src="/images/114.png"> </img>
+                            <img class="space" width="200px" src="/images/141.png"> </img>
                         </a>
                     </div>
                 </div>
@@ -299,9 +302,9 @@
                          <div class="row-fluid" style="margin-bottom:30px" data-step="4" data-position="bottom" data-intro="<%= res.i18n({phrase: 'quiz_tutorial_step4', locale: lang}) %>">
                              <div class="span12">
                                  <div id="difficultyLevel">
-                                     <a id="level1" class="btn btn-large btn-block btn-primary">1</a>
-                                     <a id="level2" class="btn btn-large btn-block btn-primary">2</a>
-                                     <a id="level3" class="btn btn-large btn-block btn-primary">3</a>
+                                     <a id="level1" class="btn btn-large btn-block btn-primary">10</a>
+                                     <a id="level2" class="btn btn-large btn-block btn-primary">20</a>
+                                     <a id="level3" class="btn btn-large btn-block btn-primary">30</a>
                                  </div>
                              </div>
                          </div>
@@ -488,7 +491,7 @@
                     prevLabel: '<%=  res.i18n({phrase: 'button_back', locale: lang}) %>',
                     skipLabel: '<%=  res.i18n({phrase: 'button_skip', locale: lang}) %>',
                     doneLabel: '<%=  res.i18n({phrase: 'button_end', locale: lang}) %>'
-                }).start()
+                })
 
                 var update = {
                     id: idGamer,
@@ -508,7 +511,7 @@
                 checkQuestion(1)
             })
 
-            if(attempt > 3) {
+            if(attempt > 1000) {
                 $('#moreTriesModal').modal()
             }
         });
@@ -662,7 +665,7 @@
                 }
 
                 if(!forFun) {
-                    if (current == 10 && !prize1) {
+                    if (current == 50 && !prize1) {
                         socket.request('/ticket/create', {
                                 prize: 1,
                                 email: gamer.email
@@ -680,7 +683,7 @@
                         $('#p1ShowBar').css('background-color', '#9b59b6')
                     }
 
-                    if (current == 20 && !prize2 ) {
+                    if (current == 50 && !prize2 ) {
                         socket.request('/ticket/create', {
                                 prize: 2,
                                 email: gamer.email

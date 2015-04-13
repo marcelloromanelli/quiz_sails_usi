@@ -73,6 +73,11 @@ module.exports.routes = {
   '/email': {
     controller: 'quiz',
     action: 'email'
+  },
+
+  '/migliori': {
+    controller: 'ticket',
+    action: 'migliori'
   }
 
   /*

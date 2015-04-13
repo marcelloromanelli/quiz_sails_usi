@@ -72,7 +72,10 @@ module.exports = {
         var today = new Date()
         var stringToday = today.getDate() + "-" + today.getMonth() + "-" + today.getFullYear()
 
-        if(req.param('email') != "usi@spiritus.ch") {
+        console.log('@@@@@@@')
+        console.log(req.param('email'))
+
+        if(req.param('email') != "usi@usi.ch") {
             Gamer.find().where({email: req.param('email')}).exec(function (err, gamer) {
                 if(gamer.length == 0) {
                     res.send('Errore: Email non esiste')
