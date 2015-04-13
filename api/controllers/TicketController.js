@@ -146,7 +146,13 @@ module.exports = {
             }
           }
 
-          res.json(winners)
+          var ss = ""
+
+          for(var w in winners) {
+            ss += winner[w].best + ": " + winner[w].email
+          }
+
+          res.json(ss)
       })
   },
 
