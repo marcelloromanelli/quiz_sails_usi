@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
+
+import csv
+import urllib2
+import httplib, urllib
+
+# urllib2.urlopen('http://orientati.inf.usi.ch:1337/language/create?lang=it&code=it')
+
+reader = csv.reader(open("domande.csv", 'rU'), dialect='excel')
+current = 0
+for row in reader:
+	if current > 0:
+
+		lvl = row[2]
+		question = row[3].replace("\"", "&quot;").replace("_e_", "&egrave;").replace("_a_", "&agrave;").replace("'", "&#39;").replace("_u_", "&agrave;")
+		wrong = row[4].replace("\"", "&quot;").replace("_e_", "&egrave;").replace("_a_", "&agrave;").replace("'", "&#39;").replace("_u_", "&agrave;")
+		correct = row[5].replace("\"", "&quot;").replace("_e_", "&egrave;").replace("_a_", "&agrave;").replace("'", "&#39;").replace("_u_", "&agrave;")
+
+		params = {'level': lvl, 'it_question': question, 'it_wrong': wrong, 'it_correct': correct}
+		ss = urllib.urlencode(params)
+
+		url = "http://orientati.inf.usi.ch:1337/question/create?" + ss
+
+		urllib2.urlopen(url)
+	current += 1
