@@ -16,8 +16,8 @@ for row in reader:
 
 		lvl = row[2]
 		question = row[3].replace("\"", "&quot;").replace("_e_", "&egrave;").replace("_a_", "&agrave;").replace("'", "&#39;").replace("_u_", "&agrave;")
-		wrong = row[4].replace("\"", "&quot;").replace("_e_", "&egrave;").replace("_a_", "&agrave;").replace("'", "&#39;").replace("_u_", "&agrave;")
-		correct = row[5].replace("\"", "&quot;").replace("_e_", "&egrave;").replace("_a_", "&agrave;").replace("'", "&#39;").replace("_u_", "&agrave;")
+		wrong = row[5].replace("\"", "&quot;").replace("_e_", "&egrave;").replace("_a_", "&agrave;").replace("'", "&#39;").replace("_u_", "&agrave;")
+		correct = row[4].replace("\"", "&quot;").replace("_e_", "&egrave;").replace("_a_", "&agrave;").replace("'", "&#39;").replace("_u_", "&agrave;")
 
 		params = {'level': lvl, 'it_question': question, 'it_wrong': wrong, 'it_correct': correct}
 		ss = urllib.urlencode(params)
