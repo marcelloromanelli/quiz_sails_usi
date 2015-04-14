@@ -146,13 +146,21 @@ module.exports = {
             }
           }
 
-          var ss = ""
+          var ss = "<html><body>"
 
           for(var w in winners) {
-            ss += winners[w].best + ": " + winners[w].email
+            ss += winners[w].best + ": " + winners[w].email + "<br>"
           }
 
-          res.json(ss)
+          ss += "-----------------------------" + "<br>"
+
+          for(var g in gamers) {
+            ss += gamers[g].best + ": " + gamers[g].email + "<br>"
+          }
+
+          ss += "</body></html>"
+
+          res.send(ss)
       })
   },
 
