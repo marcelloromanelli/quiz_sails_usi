@@ -107,7 +107,7 @@
             font-size: 50px;
             line-height:1;
 
-            height: 580px;
+            height: 380px;
             width:2000px;
             text-align: center;
             vertical-align: middle;
@@ -187,7 +187,7 @@
         .modal-body {
             padding: 30px;
             width: 1000px;
-            height:600px;
+            height:400px;
             text-align:center;
 
             vertical-align: middle;
@@ -215,7 +215,7 @@
 <body>
     <div class="container-fluid" style="margin-top:35px;">
         <div class="row-fluid">
-            <div class="span2">
+            <!-- <div class="span2">
                 <div class="row-fluid" style="margin-bottom: 15px;" data-step="1" data-position="right" data-intro="<%= res.i18n({phrase: 'quiz_tutorial_step1', locale: lang}) %>">
                     <a id="tutorial" class="btn btn-large btn-block btn-primary" onclick="javascript:startTutorial();"><%= res.i18n({phrase: 'quiz_tutorial', locale: lang}) %></a>
                 </div>
@@ -248,7 +248,7 @@
                 <div class="row-fluid">
                     <div class="row-fluid" style="margin-bottom: 20px;" data-step="7" data-position="right" data-intro="<%= res.i18n({phrase: 'quiz_tutorial_step7', locale: lang}) %>">
                         <a class="btn btn-large btn-block btn-primary" id="rules" style="text-align:center; ">
-                            <!-- <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_rules1', locale: lang}) %></div>
+                            <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_rules1', locale: lang}) %></div>
                             <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_rules2', locale: lang}) %></div>
                             <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_cat1', locale: lang}) %></div>
                             <div style="margin-bottom:15px;"><%= res.i18n({phrase: 'quiz_cat2', locale: lang}) %></div>
@@ -262,10 +262,10 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="span10">
-                <div class="row-fluid">
+            <div class="span12">
+                <!-- <div class="row-fluid">
                     <div class="span12">
                         <div class="progress" data-step="2" data-position="bottom" data-intro="<%= res.i18n({phrase: 'quiz_tutorial_step2', locale: lang}) %>">
                             <div id="p1ShowBar" class="bar bar-success" style="line-height: 40px;font-size:140%; width: 33.33333333333333%;"> <span style="font-size:110%"><%= res.i18n({phrase: 'quiz_prize1', locale: lang}) %></span></div>
@@ -273,10 +273,33 @@
                             <div id="p3ShowBar" class="bar bar-success" style="line-height: 40px;font-size:140%; width: 33.33333333333333%;"><span style="font-size:110%"><%= res.i18n({phrase: 'quiz_prize3', locale: lang}) %></span></div>
                        </div>
                     </div>
+                </div> -->
+
+                <!-- <div class="row-fluid">
+                   <div class="span12" style="text-align:center;">
+                        <h4 style="display:inline"><%= res.i18n({phrase: 'quiz_questionNumber', locale: lang}) %></h4> <h4 style="display:inline" id="questionNumber"></h4>
+                   </div>
+                </div> -->
+
+                <div class="row-fluid" style="margin-bottom: 20px;">
+                    <div class="span6">
+                        <a class="btn btn btn-block btn-primary" href="/welcome/<%= lang %>">
+                            <%= res.i18n({phrase: 'quiz_go_back', locale: lang}) %>
+                        </a>
+                    </div>
+
+                    <div class="span6">
+                        <a class="btn btn btn-block btn-secondary">
+                            <h4 style="display:inline"><%= res.i18n({phrase: 'quiz_questionNumber', locale: lang}) %></h4> <h4 style="display:inline" id="questionNumber"></h4>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="row-fluid" style="margin-bottom: 20px;">
                     <div class="span12">
+                       <!--  <span class="span12" style="text-align:center;">
+                            <h4 style="display:inline"><%= res.i18n({phrase: 'quiz_questionNumber', locale: lang}) %></h4> <h4 style="display:inline" id="questionNumber"></h4>
+                       </span> -->
                         <div class="progress" data-step="3" data-position="bottom" data-intro="<%= res.i18n({phrase: 'quiz_tutorial_step3', locale: lang}) %>">
                             <div id="score10" class="bar bar-success" style="background-color: #2ECC71; width: 0%;"></div>
                             <div id="score20" class="bar bar-success" style="background-color: #F1C40F; width: 0%;"></div>
@@ -285,13 +308,7 @@
                     </div>
                 </div>
 
-                <div class="row-fluid">
-                   <div class="span12" style="text-align:center;">
-                        <h4 style="display:inline"><%= res.i18n({phrase: 'quiz_questionNumber', locale: lang}) %></h4> <h4 style="display:inline" id="questionNumber"></h4>
-                   </div>
-                </div>
-
-                <div class="row-fluid">
+                <!-- <div class="row-fluid">
                     <div class="span6">
                          <div class="row-fluid">
                             <div class="span12" style="text-align:center;">
@@ -317,7 +334,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="row-fluid" style="margin-bottom: 20px;" data-step="5" data-position="top" data-intro="<%= res.i18n({phrase: 'quiz_tutorial_step5', locale: lang}) %>">
                     <div class="span12">

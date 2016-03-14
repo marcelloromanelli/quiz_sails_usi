@@ -1,4 +1,7 @@
 {
+    "italian": "Gioco in lingua italiana",
+    "french": "Gioco in lingua francese",
+
     "button_submit": "Gioca",
     "button_resetEmail": "Cancella Email",
     "button_next": "Avanti",
@@ -30,6 +33,7 @@
     "quiz_rules4": "Fatti aiutare dai poster in giro per il liceo, dal tuo smartphone, dai tuoi amici, oppure dai docenti!",
     "quiz_rules5": "Non ti lasciare mettere sotto pressione: hai tutto il tempo che vuoi. Buon divertimento!",
     "quiz_quit": "Esci",
+    "quiz_go_back": "Torna indietro",
 
     "quiz_modalCongrats": "Congratulazioni!",
     "quiz_victory": "SEI ARRIVATO IN FONDO!",

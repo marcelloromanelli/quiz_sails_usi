@@ -27,13 +27,14 @@
 
     <style type="text/css">
         body {
+            height:700px;
             position: relative;
             font: 71%/1.5 Verdana, Sans-Serif;
             background: #eee;
             background-image: url("/images/arco.png");
 
             background-repeat: no-repeat;
-            background-size: 100% 45%;
+            background-size: 100% 290px;
 
         }
 
@@ -182,7 +183,7 @@
         .modal-body {
             padding: 30px;
             width: 1000px;
-            height:600px;
+            height:400px;
             text-align:center;
 
             vertical-align: middle;
@@ -195,8 +196,21 @@
 <body>
     <div class="container-fluid">
         <div class="row-fluid">
-            <div class="span4 offset4" style="height:400px">
-                <img class="space" width="800px" src="/images/titolo.png"> </img>
+            <div class="span4 offset4" style="height:300px; text-align: center">
+                <img class="space" src="/images/titolo.png"> </img>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span6" style="text-align:center;">
+                <a class="btn btn-large btn-block btn-primary" href="/welcome/it">
+                    <%= res.i18n({phrase: 'italian', locale: lang}) %>
+                </a>
+            </div>
+            <div class="span6" style="text-align:center;">
+                <a class="btn btn-large btn-block btn-primary" href="/welcome/fr">
+                    <%= res.i18n({phrase: 'french', locale: lang}) %>
+                </a>
             </div>
         </div>
 
@@ -234,65 +248,67 @@
             </div>
         </div>
 
-        <div id="container" style="margin-top:0px;">
-            <ul id="keyboard">
-                <li class="symbol"><span class="off">`</span><span class="on">~</span></li>
-                <li class="symbol"><span class="off">1</span><span class="on">!</span></li>
-                <li class="symbol"><span class="off">2</span><span class="on">@</span></li>
-                <li class="symbol"><span class="off">3</span><span class="on">#</span></li>
-                <li class="symbol"><span class="off">4</span><span class="on">$</span></li>
-                <li class="symbol"><span class="off">5</span><span class="on">%</span></li>
-                <li class="symbol"><span class="off">6</span><span class="on">^</span></li>
-                <li class="symbol"><span class="off">7</span><span class="on">&amp;</span></li>
-                <li class="symbol"><span class="off">8</span><span class="on">*</span></li>
-                <li class="symbol"><span class="off">9</span><span class="on">(</span></li>
-                <li class="symbol"><span class="off">0</span><span class="on">)</span></li>
-                <li class="symbol"><span class="off">-</span><span class="on">_</span></li>
-                <li class="symbol"><span class="off">=</span><span class="on">+</span></li>
-                <li class="delete lastitem">delete</li>
-                <li class="tab">tab</li>
-                <li class="letter">q</li>
-                <li class="letter">w</li>
-                <li class="letter">e</li>
-                <li class="letter">r</li>
-                <li class="letter">t</li>
-                <li class="letter">y</li>
-                <li class="letter">u</li>
-                <li class="letter">i</li>
-                <li class="letter">o</li>
-                <li class="letter">p</li>
-                <li class="symbol"><span class="off">[</span><span class="on">{</span></li>
-                <li class="symbol"><span class="off">]</span><span class="on">}</span></li>
-                <li class="symbol lastitem"><span class="off">\</span><span class="on">|</span></li>
-                <li class="capslock">caps lock</li>
-                <li class="letter">a</li>
-                <li class="letter">s</li>
-                <li class="letter">d</li>
-                <li class="letter">f</li>
-                <li class="letter">g</li>
-                <li class="letter">h</li>
-                <li class="letter">j</li>
-                <li class="letter">k</li>
-                <li class="letter">l</li>
-                <li class="symbol"><span class="off">;</span><span class="on">:</span></li>
-                <li class="symbol"><span class="off">'</span><span class="on">&quot;</span></li>
-                <li class="return lastitem">enter</li>
-                <li class="left-shift">shift</li>
-                <li class="letter">z</li>
-                <li class="letter">x</li>
-                <li class="letter">c</li>
-                <li class="letter">v</li>
-                <li class="letter">b</li>
-                <li class="letter">n</li>
-                <li class="letter">m</li>
-                <li class="symbol"><span class="off">,</span><span class="on">&lt;</span></li>
-                <li class="symbol"><span class="off">.</span><span class="on">&gt;</span></li>
-                <li class="symbol"><span class="off">/</span><span class="on">?</span></li>
-                <li class="right-shift lastitem">shift</li>
-                <li class="right-at">@</li>
-                <li class="space lastitem">&nbsp;</li>
-            </ul>
-        </div>
+        <!-- <div class="row-fluid">
+            <div id="container" style="margin-top:0px;">
+                <ul id="keyboard">
+                    <li class="symbol"><span class="off">`</span><span class="on">~</span></li>
+                    <li class="symbol"><span class="off">1</span><span class="on">!</span></li>
+                    <li class="symbol"><span class="off">2</span><span class="on">@</span></li>
+                    <li class="symbol"><span class="off">3</span><span class="on">#</span></li>
+                    <li class="symbol"><span class="off">4</span><span class="on">$</span></li>
+                    <li class="symbol"><span class="off">5</span><span class="on">%</span></li>
+                    <li class="symbol"><span class="off">6</span><span class="on">^</span></li>
+                    <li class="symbol"><span class="off">7</span><span class="on">&amp;</span></li>
+                    <li class="symbol"><span class="off">8</span><span class="on">*</span></li>
+                    <li class="symbol"><span class="off">9</span><span class="on">(</span></li>
+                    <li class="symbol"><span class="off">0</span><span class="on">)</span></li>
+                    <li class="symbol"><span class="off">-</span><span class="on">_</span></li>
+                    <li class="symbol"><span class="off">=</span><span class="on">+</span></li>
+                    <li class="delete lastitem">delete</li>
+                    <li class="tab">tab</li>
+                    <li class="letter">q</li>
+                    <li class="letter">w</li>
+                    <li class="letter">e</li>
+                    <li class="letter">r</li>
+                    <li class="letter">t</li>
+                    <li class="letter">y</li>
+                    <li class="letter">u</li>
+                    <li class="letter">i</li>
+                    <li class="letter">o</li>
+                    <li class="letter">p</li>
+                    <li class="symbol"><span class="off">[</span><span class="on">{</span></li>
+                    <li class="symbol"><span class="off">]</span><span class="on">}</span></li>
+                    <li class="symbol lastitem"><span class="off">\</span><span class="on">|</span></li>
+                    <li class="capslock">caps lock</li>
+                    <li class="letter">a</li>
+                    <li class="letter">s</li>
+                    <li class="letter">d</li>
+                    <li class="letter">f</li>
+                    <li class="letter">g</li>
+                    <li class="letter">h</li>
+                    <li class="letter">j</li>
+                    <li class="letter">k</li>
+                    <li class="letter">l</li>
+                    <li class="symbol"><span class="off">;</span><span class="on">:</span></li>
+                    <li class="symbol"><span class="off">'</span><span class="on">&quot;</span></li>
+                    <li class="return lastitem">enter</li>
+                    <li class="left-shift">shift</li>
+                    <li class="letter">z</li>
+                    <li class="letter">x</li>
+                    <li class="letter">c</li>
+                    <li class="letter">v</li>
+                    <li class="letter">b</li>
+                    <li class="letter">n</li>
+                    <li class="letter">m</li>
+                    <li class="symbol"><span class="off">,</span><span class="on">&lt;</span></li>
+                    <li class="symbol"><span class="off">.</span><span class="on">&gt;</span></li>
+                    <li class="symbol"><span class="off">/</span><span class="on">?</span></li>
+                    <li class="right-shift lastitem">shift</li>
+                    <li class="right-at">@</li>
+                    <li class="space lastitem">&nbsp;</li>
+                </ul>
+            </div>
+        </div> -->
     </div>
 
     <div id="creditModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -328,8 +344,8 @@
         </div>
     </div>
 
-    <img class="photo-right-corner" src="/images/me_normal.png"> </img>
-    <img class="photo-bubble" src="/images/test.png"> </img>
+    <!-- <img class="photo-right-corner" src="/images/me_normal.png"> </img>
+    <img class="photo-bubble" src="/images/test.png"> </img> -->
 
     <script>
         var lang = "<%= lang%>"

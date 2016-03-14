@@ -4,22 +4,37 @@
 import csv
 import urllib2
 import httplib, urllib
+# import unicodecsv as csv
 
-website = 'http://10.40.6.128:1337/'
+def replaceLetters(s):
+   newString = s.replace("_-i-_", "&eacute;").replace("_.e._", "&ecirc;").replace("__-o-__", "&ouml;").replace("__oe__", "&#339;").replace("__o__", "&egrave;").replace("_.a._", "&acirc;").replace("_.u._", "&ucirc;").replace("_.i._", "&icirc;").replace("__deg__", "&deg").replace("\"", "&quot;").replace("__e__", "&egrave;").replace("__E__", "&Egrave;").replace("_-e-_", "&eacute;").replace("__a__", "&agrave;").replace("__A__", "&Agrave;").replace("'", "&#39;").replace("__u__", "&agrave;").replace("__U__", "&Ugrave;")
+   return newString
+
+# website = 'http://orientati.inf.usi.ch:1337/'
+website = 'http://10.62.163.3:1337/'
 
 urllib2.urlopen(website + 'language/create?lang=it&code=it')
+urllib2.urlopen(website + 'language/create?lang=fr&code=fr')
 
-reader = csv.reader(open("domande.csv", 'rU'), dialect='excel')
+# reader = csv.reader(open("domande2016.csv", 'rU'), encoding='utf-8', dialect='excel')
+reader = csv.reader(open("domande2016.csv", 'rU'), dialect='excel')
+
 current = 0
 for row in reader:
 	if current > 0:
 
 		lvl = row[2]
-		question = row[3].replace("\"", "&quot;").replace("_e_", "&egrave;").replace("_a_", "&agrave;").replace("'", "&#39;").replace("_u_", "&agrave;")
-		wrong = row[5].replace("\"", "&quot;").replace("_e_", "&egrave;").replace("_a_", "&agrave;").replace("'", "&#39;").replace("_u_", "&agrave;")
-		correct = row[4].replace("\"", "&quot;").replace("_e_", "&egrave;").replace("_a_", "&agrave;").replace("'", "&#39;").replace("_u_", "&agrave;")
 
-		params = {'level': lvl, 'it_question': question, 'it_wrong': wrong, 'it_correct': correct}
+		question = replaceLetters(row[3])
+		correct = replaceLetters(row[4])
+		wrong = replaceLetters(row[5])
+		
+		fr_question = replaceLetters(row[6])
+		fr_correct = replaceLetters(row[7])
+		fr_wrong = replaceLetters(row[8])
+		
+
+		params = {'level': lvl, 'it_question': question, 'it_wrong': wrong, 'it_correct': correct, 'fr_question': fr_question, 'fr_wrong': fr_wrong, 'fr_correct': fr_correct}
 		ss = urllib.urlencode(params)
 
 		url = website + "question/create?" + ss
