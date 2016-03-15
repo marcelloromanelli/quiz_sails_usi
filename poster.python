@@ -7,7 +7,7 @@ import httplib, urllib
 # import unicodecsv as csv
 
 def replaceLetters(s):
-   newString = s.replace("_-i-_", "&eacute;").replace("_.e._", "&ecirc;").replace("__-o-__", "&ouml;").replace("__oe__", "&#339;").replace("__o__", "&egrave;").replace("_.a._", "&acirc;").replace("_.u._", "&ucirc;").replace("_.i._", "&icirc;").replace("__deg__", "&deg").replace("\"", "&quot;").replace("__e__", "&egrave;").replace("__E__", "&Egrave;").replace("_-e-_", "&eacute;").replace("__a__", "&agrave;").replace("__A__", "&Agrave;").replace("'", "&#39;").replace("__u__", "&agrave;").replace("__U__", "&Ugrave;")
+   newString = s.replace("_-i-_", "&eacute;").replace("_.e._", "&ecirc;").replace("__-o-__", "&ouml;").replace("__oe__", "&#339;").replace("__o__", "&egrave;").replace("_.a._", "&acirc;").replace("_.u._", "&ucirc;").replace("_.i._", "&icirc;").replace("__deg__", "&deg").replace("\"", "&quot;").replace("__e__", "&egrave;").replace("__E__", "&Egrave;").replace("_-e-_", "&eacute;").replace("__a__", "&agrave;").replace("__A__", "&Agrave;").replace("'", "&#39;").replace("__u__", "&ugrave;").replace("__U__", "&Ugrave;")
    return newString
 
 # website = 'http://orientati.inf.usi.ch:1337/'

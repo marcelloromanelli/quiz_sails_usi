@@ -1,6 +1,6 @@
 {
     "italian": "Gioco in lingua italiana",
-    "french": "Gioco in lingua francese",
+    "french": "Joue en français",
 
     "button_submit": "Gioca",
     "button_resetEmail": "Cancella Email",
@@ -10,7 +10,7 @@
     "button_end": "Fine",
 
     "welcome_developers": "Sviluppatori",
-    "welcome_email": "Per poter iniziare a giocare e vincere uno dei nostri numerosi premi inserisci la tua email:",
+    "welcome_email": "Per poter iniziare a giocare inserisci la tua email:",
     "welcome_description": "Testa le tue conoscenze sulla lingua e cultura della Svizzera italiana e impara tante cose nuove.",
     "welcome_invalidEmail": "Email non valida",
 
