@@ -1,10 +1,10 @@
 {
     "quiz_go_back": "Retour",
-    "italian": "Gioco in lingua italiana",
-    "french": "Joue en français",
+    "italian": "Italiano",
+    "french": "Français",
 
     "button_submit": "Joue",
-    "button_resetEmail": "Effacer Email",
+    "button_resetEmail": "Effacer l'émail",
     "button_next": "Avanti",
     "button_back": "Indietro",
     "button_skip": "Esci",
@@ -45,7 +45,7 @@
     "quiz_modalReminder2": "",
     "quiz_modalReminder3": "",
     "quiz_modalErrorTitle": "Sarà per la prossima volta...",
-    "quiz_modalErrorContent1": "Aiiieee...mauvaise réponse!",
+    "quiz_modalErrorContent1": "Aiiieee... mauvaise réponse!",
     "quiz_ModalErrorContent2": "N'abandonne pas!",
     "quiz_tooMany": "",
     "quiz_modalTries1": "",

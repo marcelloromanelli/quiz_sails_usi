@@ -78,7 +78,8 @@ module.exports = {
         if(req.param('email') != "usi@usi.ch") {
             Gamer.find().where({email: req.param('email')}).exec(function (err, gamer) {
                 if(gamer.length == 0) {
-                    res.send('Errore: Email non esiste')
+                    res.redirect('/welcome/' + req.param('lang'))
+                    // res.send('Errore: Email non esiste')
                 } else if (gamer.length == 1) {
                     Language.find().done(function (err, languages) {
                         var requested = req.param('lang');
@@ -179,7 +180,8 @@ module.exports = {
         } else {
             Gamer.find().where({email: req.param('email')}).exec(function (err, gamer) {
                 if(gamer.length == 0) {
-                    res.send('Errore: Email non esiste')
+                    res.redirect('/welcome/' + req.param('lang'))   
+                    // res.send('Errore: Email non esiste')
                 } else if (gamer.length == 1) {
                     Language.find().done(function (err, languages) {
                         var requested = req.param('lang');
